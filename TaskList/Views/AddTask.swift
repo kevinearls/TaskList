@@ -10,6 +10,7 @@ import SwiftUI
 struct AddTask: View {
   var tasks: TaskStore
   @Binding var showModal: Bool
+  
   @State private var newTaskName: String = ""
   @State var notes: String = ""
 
@@ -24,7 +25,7 @@ struct AddTask: View {
           Spacer()
         }
         Section {
-          Button("Add") {   // TODO only enable this button if a title has been entered
+          Button("Add") {
             print("In AddTask, action for Add Button, title is [\(newTaskName)]")
             let newTask = Task(title: newTaskName, notes: notes)
             tasks.addTask(task: newTask)

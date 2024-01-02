@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
   @StateObject var tasks = TaskStore()
-  @State var isPresented = false // TODO rename
+  @State var isPresented = false
 
   var body: some View {
     VStack(alignment: .leading) {
@@ -31,18 +31,20 @@ struct ContentView: View {
               AddTask(tasks: tasks, showModal: $isPresented)
             }
           }
-          Divider().background(Color.pink).opacity(1.0)
+          Divider().background(Color.pink).opacity(1.0)   // FIXME
         }
       }
-      .navigationBarHidden(true)
-      //.navigationBarItems(trailing: <#T##View#>)
+      .navigationBarHidden(true)  // TODO do I need this?
     }
     .padding()
     Spacer()
     Button(action: { isPresented.toggle() }) {  // FIXME move, what should this look like?
       HStack {
-        Image(systemName: "plus")
+        Image(systemName: "plus.circle.fill")
           .padding()
+        Text("New Task")
+          .bold()
+          .padding(.horizontal, -15)
         Spacer()
       }
     }

@@ -16,7 +16,6 @@
 		C34E8EF82B4417230054BE01 /* TaskStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E8EF72B4417230054BE01 /* TaskStore.swift */; };
 		C34E8EFB2B441A9E0054BE01 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E8EFA2B441A9E0054BE01 /* TaskView.swift */; };
 		C34E8EFD2B4443B30054BE01 /* AddTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E8EFC2B4443B30054BE01 /* AddTask.swift */; };
-		C34E8F012B4453340054BE01 /* EraseMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34E8F002B4453340054BE01 /* EraseMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		C34E8EF72B4417230054BE01 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 		C34E8EFA2B441A9E0054BE01 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		C34E8EFC2B4443B30054BE01 /* AddTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTask.swift; sourceTree = "<group>"; };
-		C34E8F002B4453340054BE01 /* EraseMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EraseMe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 				C32A9BD02B419A3E00E05D17 /* ContentView.swift */,
 				C34E8EFA2B441A9E0054BE01 /* TaskView.swift */,
 				C34E8EFC2B4443B30054BE01 /* AddTask.swift */,
-				C34E8F002B4453340054BE01 /* EraseMe.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,7 +177,6 @@
 				C34E8EF82B4417230054BE01 /* TaskStore.swift in Sources */,
 				C34E8EFB2B441A9E0054BE01 /* TaskView.swift in Sources */,
 				C32A9BCF2B419A3E00E05D17 /* TaskListApp.swift in Sources */,
-				C34E8F012B4453340054BE01 /* EraseMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
