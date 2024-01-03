@@ -18,7 +18,7 @@ struct AddTask: View {
     Form {
       HStack {
         Section {
-          Button("Cancel") {  // FIXME move this
+          Button("Cancel") {
             showModal = false
           }
           .padding()
@@ -26,7 +26,6 @@ struct AddTask: View {
         }
         Section {
           Button("Add") {
-            print("In AddTask, action for Add Button, title is [\(newTaskName)]")
             let newTask = Task(title: newTaskName, notes: notes)
             tasks.addTask(task: newTask)
             showModal = false

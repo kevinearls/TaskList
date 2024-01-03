@@ -4,11 +4,10 @@
 //
 //  Created by Kevin Earls on 02/01/2024.
 //
-
 import SwiftUI
 
 struct TaskView: View {
-  var task: Task // FIXME how to change the status???
+  @ObservedObject var task: Task // FIXME how to change the status???
 
   // FIXME get this to look like the example.
     var body: some View {
@@ -21,11 +20,17 @@ struct TaskView: View {
           Section(header: Text("Notes").font(.largeTitle)) {
             Text(task.notes)
           }
-//          Section {  // FIXME how does this work????
-//            Toggle(isOn: task.isCompleted, label: {
-//              Text("Completed")
-//            })
+//          Section(header: Text("Completed").font(.largeTitle)) {
+//            Text("\(task.isCompleted.description)")
 //          }
+          Section (header: Text("Completed").font(.largeTitle)){  // FIXME how does this work????
+            Toggle(isOn: $task.isCompleted, label: {
+              Text("Completed")
+            })
+            .onChange(of: task.isCompleted) { oldValue, newValue in
+              print("Change from \(oldValue) to \(newValue)")
+            }
+          }
         }
       }
     }

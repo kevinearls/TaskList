@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
   @StateObject var tasks = TaskStore()
-  @State var isPresented = false
+  @State private var isPresented = false
 
   var body: some View {
     VStack(alignment: .leading) {
       NavigationStack() {   // TODO how to align this?
-        ForEach(tasks.taskStore) { task in
+        ForEach($tasks.taskStore) { $task in
           NavigationLink(value: task) {
             HStack(alignment: .top) {
               Text(task.title)
@@ -38,7 +38,7 @@ struct ContentView: View {
     }
     .padding()
     Spacer()
-    Button(action: { isPresented.toggle() }) {  // FIXME move, what should this look like?
+    Button(action: { isPresented.toggle() }) {
       HStack {
         Image(systemName: "plus.circle.fill")
           .padding()
