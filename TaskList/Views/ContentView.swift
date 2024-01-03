@@ -13,8 +13,8 @@ struct ContentView: View {
 
   var body: some View {
     VStack(alignment: .leading) {
-      NavigationStack() {   // TODO how to align this?
-        ForEach($tasks.taskStore) { $task in
+      NavigationStack() {
+        ForEach($tasks.tasks) { $task in
           NavigationLink(value: task) {
             HStack(alignment: .top) {
               Text(task.title)
@@ -31,10 +31,10 @@ struct ContentView: View {
               AddTask(tasks: tasks, showModal: $isPresented)
             }
           }
-          Divider().background(Color.pink).opacity(1.0)   // FIXME
+          Divider()
         }
       }
-      .navigationBarHidden(true)  // TODO do I need this?
+      .navigationBarHidden(true)
     }
     .padding()
     Spacer()

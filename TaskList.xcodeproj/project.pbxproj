@@ -25,7 +25,6 @@
 		C32A9BD22B419A3F00E05D17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C32A9BD52B419A3F00E05D17 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C32A9BDC2B419B5300E05D17 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		C32A9BDE2B419F4800E05D17 /* Assignment.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Assignment.md; sourceTree = "<group>"; };
 		C34E8EF52B4416B10054BE01 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C34E8EF72B4417230054BE01 /* TaskStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskStore.swift; sourceTree = "<group>"; };
 		C34E8EFA2B441A9E0054BE01 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
@@ -46,7 +45,6 @@
 		C32A9BC22B419A3E00E05D17 = {
 			isa = PBXGroup;
 			children = (
-				C32A9BDE2B419F4800E05D17 /* Assignment.md */,
 				C32A9BDC2B419B5300E05D17 /* README.md */,
 				C32A9BCD2B419A3E00E05D17 /* TaskList */,
 				C32A9BCC2B419A3E00E05D17 /* Products */,

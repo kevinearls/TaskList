@@ -7,9 +7,7 @@
 import SwiftUI
 
 struct TaskView: View {
-  @ObservedObject var task: Task // FIXME how to change the status???
-
-  // FIXME get this to look like the example.
+  @ObservedObject var task: Task
     var body: some View {
       Form {
         VStack(alignment: .leading) {
@@ -20,16 +18,10 @@ struct TaskView: View {
           Section(header: Text("Notes").font(.largeTitle)) {
             Text(task.notes)
           }
-//          Section(header: Text("Completed").font(.largeTitle)) {
-//            Text("\(task.isCompleted.description)")
-//          }
-          Section (header: Text("Completed").font(.largeTitle)){  // FIXME how does this work????
+          Section (header: Text("Completed").font(.largeTitle)) {
             Toggle(isOn: $task.isCompleted, label: {
               Text("Completed")
             })
-            .onChange(of: task.isCompleted) { oldValue, newValue in
-              print("Change from \(oldValue) to \(newValue)")
-            }
           }
         }
       }

@@ -13,6 +13,7 @@ struct AddTask: View {
   
   @State private var newTaskName: String = ""
   @State var notes: String = ""
+  @State var address: String = ""
 
   var body: some View {
     Form {
@@ -37,7 +38,8 @@ struct AddTask: View {
       VStack {
         TextField("Task Title", text: $newTaskName)
           .padding()
-        TextField("Task Notes", text: $notes)
+        TextField("Task Notes", text: $notes, axis: .vertical)
+          .lineLimit(5)
           .padding()
       }
     }

@@ -7,20 +7,28 @@ Reminder: Answering the questions is mandatory for a passing grade, but the accu
 Try answering the questions without looking up the answers in the content. Trying to recall the answers from memory and writing in your own words is a really effective technique to improve your memory. If you get stuck, review the content and write the answer in your own words. The only guaranteed way to get these wrong is to not answer them!
 
 a) __Modifiers_______ are used to customize the appearance and behavior of a View.
+
 b) The basic building block of a SwiftUI interface is a ____View__________.
+
 c) Each View in SwiftUI is a ___Value________ type.
+
 d) List two ways you can find the modifiers of a View.
-    1) In XCode click on the + in the upper right to open the library, and then click on the second icon from the left to sh modifier.  2. Also in XCode, enter "." after a view reference and go through the list it opens.""
+    1) In XCode click on the + in the upper right to open the library, and then click on the second icon from the left to sh modifier.  2. Also in XCode, enter "." after a view reference and go through the list it opens.
+    
 e) True or False: A modifier changes a View.
     False, it returns a new view
+    
 f) Modifiers are performed and returned in ____Order______ from the ____View___________ they are applied to.
+
 g) When the data driving a View changes, that View has to be ___recreated_________ to reflect the change.
+
 h) True or False: The @Binding establishes a two-way connection between Views.
     True
+    
 i) @State works with ____Value_____ types and @StateObject works with ____Reference________ types.
+
 j) True or False: A @State property can be defined as let (constant).
     False
-    
     
 k) A List is a specialized version of a _____V______ stack.
 
