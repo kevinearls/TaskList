@@ -20,6 +20,9 @@ struct ContentView: View {
           }
           Divider()
         }
+        .navigationDestination(for: Task.self) { task in
+          TaskView(task: task)
+        }
       }
       .navigationBarHidden(true)
     }
@@ -57,9 +60,6 @@ struct TaskRow: View {
       Spacer()
       Image(systemName: task.isCompleted ? "checkmark.square" : "square")
         .foregroundColor(task.isCompleted ? Color.green : Color.red)
-    }
-    .navigationDestination(for: Task.self) { task in
-      TaskView(task: task)
     }
     .navigationBarTitle("My Tasks")
     .sheet(isPresented: $isPresented) {
