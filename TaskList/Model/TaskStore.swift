@@ -24,4 +24,13 @@ class TaskStore: ObservableObject {
   public func addTask(task: Task) {
     tasks.append(task)
   }
+
+  // NOTE: The assignment says have a function to complete a task, this will actually toggle
+  public func completeTask(task: Task) {
+    if let index = tasks.firstIndex(where: { $0.id == task.id}) {
+      let newTask = Task(title: task.title, isCompleted:
+                          task.isCompleted ? false : true, notes: task.notes)
+      tasks[index] = newTask
+    }
+  }
 }

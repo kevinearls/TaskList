@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct AddTask: View {
-  var tasks: TaskStore
   @Binding var showModal: Bool
-  
+  @EnvironmentObject var taskStore: TaskStore
+
   @State private var newTaskName: String = ""
   @State var notes: String = ""
   @State var address: String = ""
@@ -28,7 +28,7 @@ struct AddTask: View {
         Section {
           Button("Add") {
             let newTask = Task(title: newTaskName, notes: notes)
-            tasks.addTask(task: newTask)
+            taskStore.addTask(task: newTask)
             showModal = false
           }
           .padding()
@@ -47,5 +47,6 @@ struct AddTask: View {
 }
 
 #Preview {
-  AddTask(tasks: TaskStore(), showModal: .constant(true))
+  AddTask(showModal: .constant(true))
+    .environmentObject(TaskStore())
 }
